@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Flutter path
-# export PATH="$PATH:/home/faizauthar/bin/flutter/bin"
+# export PATH="$PATH:$HOME/bin/flutter/bin"
 
 # Chrome Path (unstable branch)
 export CHROME_EXECUTABLE=/opt/google/chrome-unstable/chrome
@@ -120,7 +120,7 @@ alias rs='repo sync -c --force-sync --no-clone-bundle --no-tags'
 
 # Install Ruby Gems to ~/gems
 #export GEM_HOME="$HOME/.gems"
-#export PATH="/home/faizauthar/.gem/ruby/2.7.0/bin:$PATH"
+#export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
 # Run FetchChord
 # fetchcord --nohardware --noshell --nohost
@@ -131,15 +131,15 @@ echo "i use arch btw"
 #echo "prd -> stg -> dev"
 
 # Golang export
-# export PATH="/home/faizauthar/go/bin:$PATH"
+# export PATH="$HOME/go/bin:$PATH"
 
 # Flutter
-export PATH="$PATH:/home/faizauthar/bin/flutter/bin"
+export PATH="$PATH:$HOME/bin/flutter/bin"
 
 PATH="$HOME/.local/bin:$PATH"
 export npm_config_prefix="$HOME/.local"
 
-# alias aosp-missing-blobs='/home/faizauthar/bin/aosp-missing-blobs'
+# alias aosp-missing-blobs='$HOME/bin/aosp-missing-blobs'
 
 # Android home path
 export ANDROID_HOME=$HOME/Android/Sdk
