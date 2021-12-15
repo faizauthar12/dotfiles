@@ -122,14 +122,6 @@ alias rs='repo sync -c --force-sync --no-clone-bundle --no-tags'
 #export GEM_HOME="$HOME/.gems"
 #export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
-# Run FetchChord
-# fetchcord --nohardware --noshell --nohost
-# systemctl --user enable --now fetchcord
-
-# Let's echo
-echo "i use arch btw"
-#echo "prd -> stg -> dev"
-
 # Golang export
 # export PATH="$HOME/go/bin:$PATH"
 
