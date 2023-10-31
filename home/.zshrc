@@ -24,14 +24,13 @@ ZSH_THEME="agnoster"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -46,6 +45,9 @@ ZSH_THEME="agnoster"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -75,6 +77,7 @@ plugins=(
 	systemd
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,41 +107,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-# Flutter path
-# export PATH="$PATH:$HOME/bin/flutter/bin"
-
-# Chrome Path (unstable branch)
-export CHROME_EXECUTABLE=/opt/google/chrome-unstable/chrome
-
-# JACK JILL SHIT!!!
-export ANDROID_JACK_VM_ARGS="-Xmx16g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
-
-# Repo sync
-alias rs='repo sync -c --force-sync --no-clone-bundle --no-tags'
-
-# Install Ruby Gems to ~/gems
-#export GEM_HOME="$HOME/.gems"
-#export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-
-# Golang export
-# export PATH="$HOME/go/bin:$PATH"
-
-# Flutter
-export PATH="$PATH:$HOME/bin/flutter/bin"
-
-PATH="$HOME/.local/bin:$PATH"
-export npm_config_prefix="$HOME/.local"
-
-# alias aosp-missing-blobs='$HOME/bin/aosp-missing-blobs'
-
-# Android home path
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# React native env
-REACT_EDITOR=code
